@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Trekking & Hiking Routes</title>
+  <link rel="stylesheet" href="login.css" />
+
+  <!-- ✅ Google Identity Services SDK -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <header class="main-header">
+    <img src="logo.png" alt="Trekking & Hiking Routes Logo" class="logo" />
+    <div class="search-bar-header">
+      <input type="text" placeholder="Search" />
+    </div>
+    <nav>
+      <a href="#">Explore</a>
+      <a href="#">Saved</a>
+      <a href="#">Shop</a>
+      <button class="login-btn">Log in</button>
+    </nav>
+  </header>
+
+  <div class="login-bg">
+    <img src="pexels-robertforevr-2496880.jpg" class="login-bg-img" alt="background" />
+    <div class="login-form-wrap">
+      <form action="login.php" method="POST"></form>
+      <form class="login-form" onsubmit="return false;">
+        <h2>Welcome back.<br>Log in and start exploring.</h2>
+
+        <label>Email address *<input type="email" required /></label>
+        <label>Password *<input type="password" required /></label>
+
+        <button type="submit" class="main-login-btn">Log in</button>
+
+        <!-- ✅ Google Login Button -->
+        <div id="g_id_onload"
+             data-client_id="165358738285-20habf0io9a79uqv5qsolpv9o08q1i1p.apps.googleusercontent.com"
+             data-context="signin"
+             data-ux_mode="popup"
+             data-callback="handleCredentialResponse"
+             data-auto_prompt="false">
+        </div>
+
+        <div class="g_id_signin" data-type="standard"></div>
+
+        <div class="forgot-section">
+          <a href="#">Forgot your password?</a>
+        </div>
+
+        <div class="signup">
+          Don't have an account? <a href="#">Sign up for free</a><br>
+          <a href="index.html" class="back-home-btn">← Back to homepage</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-cols">
+      <div>
+        <h4>Explore</h4>
+        <a href="#">Countries</a>
+        <a href="#">Regions</a>
+        <a href="#">Cities</a>
+        <a href="#">Parks</a>
+        <a href="#">Trails</a>
+        <a href="#">Points of Interest</a>
+        <a href="#">Trail Features</a>
+      </div>
+      <div>
+        <h4>Custom routes & maps</h4>
+        <a href="#">Build custom route</a>
+        <a href="#">Print maps</a>
+        <a href="#">Route converter</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Jobs</a>
+        <a href="#">Press</a>
+        <a href="#">Ambassadors</a>
+        <a href="#">Affiliates</a>
+        <a href="#">Influencers</a>
+      </div>
+      <div>
+        <h4>Community</h4>
+        <a href="#">Support</a>
+        <a href="#">Gift membership</a>
+        <a href="#">Gear</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ISHAN GAURI</span>
+    </div>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>

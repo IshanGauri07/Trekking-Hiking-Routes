@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #ffffff;
+  color: #18281b;
+}
+.main-header {
+  background: #18281b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.logo {
+  height: 40px;
+}
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  transition: background 0.2s;
+}
+nav a.active, nav a:hover {
+  background: #ffffff;
+  color: #18281b;
+}
+.login-btn {
+  background: #18281b;
+  border: 1px solid #fafafa;
+  color: #ffffff;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.hero-section {
+  background-color: #6ede75; 
+  text-align: center;
+  padding: 3.2rem 1rem 2.5rem 1rem;
+  color: #fbfdfb;
+  box-shadow: 0 4px 24px #0a150c40;
+}
+.hero-section h1 {
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-shadow: 0 1px 10px #0005;
+}
+.hero-section p {
+  font-size: 1.18rem;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+.explore-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.explore-section h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #18281b;
+  text-align: left;
+}
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.route-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 14px #18281b22;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.route-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+.route-info {
+  padding: 1rem 1.1rem;
+}
+.route-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #264d22;
+  margin-bottom: 0.3rem;
+}
+.route-info p {
+  color: #64806a;
+  font-size: 0.97rem;
+  margin: 0;
+}
+.route-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px #6ede7530;
+}
+footer {
+  background: #1b211d;
+  color: #eee;
+  padding: 2.5rem 0 1rem 0;
+  margin-top: 2.5rem;
+}
+.footer-cols {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.footer-cols h4 {
+  color: #6ede75;
+  margin-bottom: 0.6rem;
+}
+.footer-cols a {
+  display: block;
+  color: #d3ffd3;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+.footer-bottom {
+  text-align: center;
+  color: #888;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+@media (max-width: 900px) {
+  .footer-cols {
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+}

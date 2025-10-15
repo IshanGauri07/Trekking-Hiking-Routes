@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trail Details</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+.trail-img { width: 100%; max-width: 700px; height: auto; border-radius: 8px; margin-bottom: 20px; }
+h1 { margin-top: 20px; }
+p { font-size: 16px; color: #555; line-height: 1.5; }
+.detail-row { margin: 10px 0; }
+.detail-row strong { display: inline-block; width: 150px; }
+</style>
+</head>
+<body>
+
+<img id="trail-img" class="trail-img" src="" alt="">
+<h1 id="trail-name"></h1>
+<p id="trail-description"></p>
+
+<div class="detail-row"><strong>Location:</strong> <span id="trail-location"></span></div>
+<div class="detail-row"><strong>Distance:</strong> <span id="trail-distance"></span></div>
+<div class="detail-row"><strong>Difficulty:</strong> <span id="trail-difficulty"></span></div>
+<div class="detail-row"><strong>Duration:</strong> <span id="trail-duration"></span></div>
+<div class="detail-row"><strong>Elevation Gain:</strong> <span id="trail-elevation"></span></div>
+<div class="detail-row"><strong>Best Season:</strong> <span id="trail-season"></span></div>
+
+<script>
+// Enhanced trail details
+const trails = {
+    nahargarh: {
+        img: 'nahargarh fort.jpg',
+        name: 'Nahargarh Fort - Charan Mandir Trail',
+        location: 'Nahargarh Wildlife Sanctuary, Jaipur',
+        description: 'This scenic trail starts from Nahargarh Fort and leads to Charan Mandir. Offers panoramic views of Jaipur city, with some steep sections.',
+        distance: '5.5 km',
+        difficulty: 'Moderate',
+        duration: '1.5–2 hr',
+        elevation: '280 m',
+        season: 'October - March'
+    },
+    hathni: {
+        img: 'hathni kund.avif',
+        name: 'Hathni Kund Trail',
+        location: 'Near Nahargarh Wildlife Sanctuary',
+        description: 'A peaceful trail along Hathni Kund river, perfect for beginners. Enjoy the sounds of water and greenery.',
+        distance: '2.4 km',
+        difficulty: 'Easy',
+        duration: '0.5–1 hr',
+        elevation: '50 m',
+        season: 'October - April'
+    },
+    maila: {
+        img: 'maila bagh.jpg',
+        name: 'Maila Bagh Trail',
+        location: 'Maila Bagh, Jaipur',
+        description: 'This moderate trail winds through Maila Bagh gardens and forested patches. Great for birdwatching and photography.',
+        distance: '7.4 km',
+        difficulty: 'Moderate',
+        duration: '2–3 hr',
+        elevation: '300 m',
+        season: 'November - March'
+    },
+    amba: {
+        img: 'amba mata.jpg',
+        name: 'Amba Mata Temple Trail',
+        location: 'Near Nahargarh Wildlife Sanctuary',
+        description: 'Challenging hike leading to the Amba Mata temple. Offers panoramic city views, rocky paths, and moderate climbs.',
+        distance: '4.3 km',
+        difficulty: 'Moderate',
+        duration: '1.5–2 hr',
+        elevation: '220 m',
+        season: 'October - February'
+    }
+};
+    
+
+// Get selected trail from localStorage
+const selectedTrail = localStorage.getItem('selectedTrail');
+if (selectedTrail && trails[selectedTrail]) {
+    const t = trails[selectedTrail];
+    document.getElementById('trail-img').src = t.img;
+    document.getElementById('trail-name').textContent = t.name;
+    document.getElementById('trail-description').textContent = t.description;
+    document.getElementById('trail-location').textContent = t.location;
+    document.getElementById('trail-distance').textContent = t.distance;
+    document.getElementById('trail-difficulty').textContent = t.difficulty;
+    document.getElementById('trail-duration').textContent = t.duration;
+    document.getElementById('trail-elevation').textContent = t.elevation;
+    document.getElementById('trail-season').textContent = t.season;
+} else {
+    document.body.innerHTML = "<p>Trail details not found.</p>";
+}
+</script>
+
+</body>
+</html>

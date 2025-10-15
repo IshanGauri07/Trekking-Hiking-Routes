@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7f3;
+    color: #1c2a13;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #18281b;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    height: 48px;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-btn {
+    background: none;
+    border: 1px solid #6ede75;
+    color: #6ede75;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #c9e0d3;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.hero-content {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: #18281b;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    padding: 0.75rem 1.5rem;
+    width: 380px;
+    border-radius: 30px;
+    border: 1px solid #b8c5bb;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.hero-content button {
+    background: #6ede75;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+.summary {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    background: #fff;
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.summary div h2 {
+    color: #1c2a13;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+
+
+.activity-list {
+    background: #f7f8f2;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+}
+.activity-list .activities {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 1rem;
+}
+.activity-list .activities div {
+    text-align: center;
+}
+.activity-list img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #c9e0d3;
+}
+.activities span {
+    display: block;
+    margin-top: 0.7rem;
+    font-size: 1.1rem;
+}
+
+.trail-cards {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+    background: #e6edeb;
+}
+.card {
+    width: 270px;
+    background: #fff;
+    box-shadow: 0 2px 6px #eee;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+.card-info {
+    padding: 1rem;
+}
+
+footer {
+    background: #1b211d;
+    color: #eee;
+    padding: 2.5rem 0 1rem 0;
+}
+.footer-cols {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.footer-cols h4 {
+    color: #6ede75;
+    margin-bottom: 0.6rem;
+}
+.footer-cols a {
+    display: block;
+    color: #d3ffd3;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+.footer-bottom {
+    text-align: center;
+    color: #888;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+#map { width: 100%; height: 400px; margin: 20px 0; }
+.result-card { background: #fff; margin-bottom: 14px; padding: 18px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+.result-card h3 { margin-bottom: 2px; }
